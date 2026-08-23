@@ -2,11 +2,11 @@ name: Hello World
 
 on:
   push:
-      brances: [ main ]
+      branches: [ main ]
 jobs:
     demo: 
-      runs on: ubuntu-latest
+      runs-on: ubuntu-latest
 
       steps: 
-          name: Greetings
+        -name: Greetings
           run: echo "Hello World"
