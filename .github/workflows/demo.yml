@@ -1,12 +1,24 @@
-name: Hello World
+name: Hello World Workflow
 
 on:
   push:
-      branches: [ main ]
-jobs:
-    demo: 
-      runs-on: ubuntu-latest
+    branches: [ "main" ]
 
-      steps: 
-        -name: Greetings
-          run: echo "Hello World"
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # Step 3: Run Hello World
+      - name: Run script
+        run: node hello.js
