@@ -1,0 +1,17 @@
+name: manual workflow
+
+on:
+  workflow_dispatch: 
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Run Hello World directly
+      - name: Print Hello World
+        run: echo "Hello, World!"
