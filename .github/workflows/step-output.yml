@@ -8,8 +8,8 @@ jobs:
   job1:
     runs-on: ubuntu-latest
 
-  steps:
-    -name: set output
+steps:
+  -name: set output
    id: set-output
    shell: bash
    run: echo "age=23" >> $GITHUB_OUTPUT
